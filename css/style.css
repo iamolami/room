@@ -1,0 +1,364 @@
+/* Media Queries */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;300;500;700;900&display=swap");
+/*General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: 0%;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+    height: 0%;
+  }
+}
+.header__wrapper-left {
+  flex: 1;
+  height: 80vh;
+  flex-grow: 1.5;
+}
+.header__wrapper-left img {
+  width: 100%;
+  height: 80vh;
+}
+.header__wrapper-right {
+  flex: 1;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.header__text {
+  width: 77%;
+  padding-top: 7rem;
+}
+@media (max-width: 768px) {
+  .header__text {
+    width: 100%;
+    padding-top: 3rem;
+    height: 70vh;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  .header__text {
+    width: 100%;
+    padding-top: 3rem;
+    height: 75vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.header__main {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  line-height: 3rem;
+}
+@media (max-width: 400px) {
+  .header__main {
+    font-size: 1.5rem;
+  }
+}
+.header__description {
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  color: #a1a1a1;
+  margin-top: 1.5rem;
+}
+.header__button {
+  background-color: transparent;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  border: none;
+  margin-top: 2.5rem;
+  font-family: inherit;
+  cursor: pointer;
+  color: #454545;
+  transition: all 0.4s ease-in-out;
+}
+.header__button:hover {
+  color: #a1a1a1;
+}
+
+.menuBox {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  z-index: 3000;
+}
+@media (max-width: 400px) {
+  .menuBox {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .menuBox {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 400px) {
+  .menuBox__nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    background-color: white;
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .menuBox__nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    background-color: white;
+    display: none;
+  }
+}
+.menuBox__log {
+  width: 30%;
+  margin-right: 5rem;
+}
+.menuBox__log img {
+  width: 100%;
+}
+@media (max-width: 400px) {
+  .menuBox__log {
+    margin-top: 2.5rem;
+    width: 20%;
+    margin-left: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .menuBox__log {
+    margin-top: 2.5rem;
+    width: 20%;
+    margin-left: 7rem;
+  }
+}
+.menuBox__items {
+  list-style: none;
+  line-height: 20px;
+}
+@media (max-width: 400px) {
+  .menuBox__items {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .menuBox__items {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+.menuBox__list {
+  display: inline-block;
+}
+.menuBox__list:not(:first-child) {
+  margin-left: 1rem;
+}
+.menuBox__link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: white;
+  position: relative;
+}
+@media (max-width: 400px) {
+  .menuBox__link {
+    color: black;
+  }
+}
+@media (max-width: 768px) {
+  .menuBox__link {
+    color: black;
+  }
+}
+.menuBox__link:hover::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+}
+.menuBox__close {
+  display: none;
+  opacity: 0;
+  width: 0;
+}
+@media (max-width: 400px) {
+  .menuBox__close {
+    display: inline-block;
+    opacity: 1;
+    float: left;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .menuBox__close {
+    display: block;
+    opacity: 1;
+    width: 5%;
+    float: left;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+.menuBox__burger {
+  display: none;
+}
+@media (max-width: 400px) {
+  .menuBox__burger {
+    width: 7%;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .menuBox__burger {
+    width: 3%;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    display: block;
+  }
+}
+.menuBox__toggle {
+  width: 100%;
+}
+
+.container__angle {
+  width: 10%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20%;
+  left: 60%;
+  z-index: 3000;
+}
+@media (max-width: 400px) {
+  .container__angle {
+    width: 30%;
+    left: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .container__angle {
+    width: 20%;
+    left: 80%;
+  }
+}
+.container__angle-left, .container__angle-right {
+  flex: 1;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.container__angle-left:hover, .container__angle-right:hover {
+  background-color: #454545;
+}
+.container__angle img {
+  width: 15%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.about__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+}
+.about__box {
+  flex: 1;
+  height: 40vh;
+}
+.about__box img {
+  width: 100%;
+}
+.about__grow {
+  flex-grow: 1.5;
+  background-color: beige;
+  padding: 3rem 2rem;
+}
+.about__main {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: black;
+}
+.about__description {
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  color: #a1a1a1;
+  margin-top: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

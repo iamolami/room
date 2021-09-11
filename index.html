@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+  <!-- ======================= Custom css stlye =================== -->
+  <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  
+  <title>Frontend Mentor | Room homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="header">
+            <div class="header__wrapper-left header__bg-1"><img src="/images/desktop-image-hero-1.jpg" alt=""></div>
+            <div class="header__wrapper-right">
+              <div class="header__text">
+                <h2 class="header__main">Discover innovative ways to decorate</h2>
+                <p class="header__description">
+                  We provide unmatched quality, comfort, and style for property owners across the country. 
+                  Our experts combine form and function in bringing your vision to life. Create a room in your 
+                  own style with our collection and make your property a reflection of you and what you love.
+                </p>
+                <button class="header__button">Shop Now <img src="/images/icon-arrow.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="header">
+            <div class="header__wrapper-left header__bg-2"><img src="/images/desktop-image-hero-2.jpg" alt=""></div>
+            <div class="header__wrapper-right">
+              <div class="header__text">
+                <h2 class="header__main">We are available all across the globe</h2>
+                <p class="header__description">
+                  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+                  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+                  store locator. Any questions? Don't hesitate to contact us today.
+                </p>
+                <button class="header__button">Shop Now <img src="/images/icon-arrow.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="header">
+            <div class="header__wrapper-left header__bg-3"><img src="/images/desktop-image-hero-3.jpg" alt=""></div>
+            <div class="header__wrapper-right">
+              <div class="header__text">
+                <h2 class="header__main">Manufactured with the best materials</h2>
+                <p class="header__description">
+                  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+                  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+                  experience in this industry, we understand customers needs for their home and office.
+                </p>
+                <button class="header__button">Shop Now <img src="/images/icon-arrow.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container__angle">
+      <div class="container__angle-left"><img src="/images/icon-angle-left.svg" alt=""></div>
+      <div class="container__angle-right"><img src="/images/icon-angle-right.svg" alt=""></div>
+    </div>
+    <div class="menuBox" id="menu">
+      <div class="menuBox__burger"><img src="/images/icon-hamburger.svg" alt="" class="menuBox__toggle" id="toggle"></div>
+      <div class="menuBox__logo"><img src="/images/logo.svg" alt="" class="menuBox__log"></div>
+        <nav class="menuBox__nav" id="navigation">
+          <div class="menuBox__close" id="close"><img src="/images/icon-close.svg" alt=""></div>
+          <ul class="menuBox__items">
+            <li class="menuBox__list"><a href="#" class="menuBox__link">Home</a></li>
+            <li class="menuBox__list"><a href="#" class="menuBox__link">About</a></li>
+            <li class="menuBox__list"><a href="#" class="menuBox__link">Shop</a></li>
+            <li class="menuBox__list"><a href="#" class="menuBox__link">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+
+    <!-- =========== About ============= -->
+    <div class="about">
+      <div class="about__wrapper">
+        <div class="about__box"><img src="/images/image-about-dark.jpg" alt=""></div>
+        <div class="about__box about__grow">
+          <h2 class="about__main">About our furniture</h2>
+          <p class="about__description">
+            Our multifunctional collection blends design and function to suit your individual taste.
+            Make each room unique, or pick a cohesive theme that best express your interests and what
+            inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+            or anything in between. Product specialists are available to help you create your dream space.
+          </p>
+        </div>
+        <div class="about__box"><img src="/images/image-about-light.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="mailto: musediqolamilekan567@gmail.com">Musediq Olamilekan</a>.
+  </div>
+  <script src="/javascript/main.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".container__angle-right",
+          prevEl: ".container__angle-left",
+        },
+      });
+    </script>
+</body>
+</html>
