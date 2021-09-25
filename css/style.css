@@ -36,13 +36,19 @@ body {
   flex-direction: row;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 575px) {
   .header {
     flex-direction: column;
     height: 0%;
   }
 }
-@media (max-width: 400px) {
+@media (min-width: 575px) {
+  .header {
+    flex-direction: column;
+    height: 0%;
+  }
+}
+@media (min-width: 768px) {
   .header {
     flex-direction: column;
     height: 0%;
@@ -52,6 +58,24 @@ body {
   flex: 1;
   height: 80vh;
   flex-grow: 1.5;
+}
+@media (max-width: 575px) {
+  .header__wrapper-left {
+    height: 65vh;
+    flex-grow: 1;
+  }
+}
+@media (min-width: 575px) {
+  .header__wrapper-left {
+    height: 65vh;
+    flex-grow: 1;
+  }
+}
+@media (min-width: 768px) {
+  .header__wrapper-left {
+    height: 60vh;
+    flex-grow: 1;
+  }
 }
 .header__wrapper-left img {
   width: 100%;
@@ -67,22 +91,27 @@ body {
   width: 77%;
   padding-top: 7rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 575px) {
   .header__text {
     width: 100%;
-    padding-top: 3rem;
-    height: 70vh;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    height: 60vh;
+    padding: 2rem;
   }
 }
-@media (max-width: 400px) {
+@media (min-width: 575px) {
+  .header__text {
+    width: 100%;
+    height: 60vh;
+    padding: 2rem;
+  }
+}
+@media (min-width: 768px) {
   .header__text {
     width: 100%;
     padding-top: 3rem;
-    height: 75vh;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    height: 65vh;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 .header__main {
@@ -91,9 +120,14 @@ body {
   font-weight: 700;
   line-height: 3rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .header__main {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 575px) {
+  .header__main {
+    font-size: 1.2rem;
   }
 }
 .header__description {
@@ -117,6 +151,12 @@ body {
 .header__button:hover {
   color: #a1a1a1;
 }
+@media (max-width: 575px) {
+  .header__button {
+    margin-top: 1.5rem;
+    font-size: 0.6rem;
+  }
+}
 
 .menuBox {
   position: absolute;
@@ -127,21 +167,28 @@ body {
   color: white;
   z-index: 3000;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .menuBox {
     width: 100%;
     top: 0;
     left: 0;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
   .menuBox {
     width: 100%;
     top: 0;
     left: 0;
   }
 }
-@media (max-width: 400px) {
+@media (min-width: 768px) {
+  .menuBox {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 575px) {
   .menuBox__nav {
     position: absolute;
     top: 0;
@@ -151,7 +198,17 @@ body {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
+  .menuBox__nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    background-color: white;
+    display: none;
+  }
+}
+@media (min-width: 768px) {
   .menuBox__nav {
     position: absolute;
     top: 0;
@@ -168,14 +225,21 @@ body {
 .menuBox__log img {
   width: 100%;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .menuBox__log {
     margin-top: 2.5rem;
     width: 20%;
     margin-left: 6rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
+  .menuBox__log {
+    margin-top: 2.5rem;
+    width: 20%;
+    margin-left: 6rem;
+  }
+}
+@media (min-width: 768px) {
   .menuBox__log {
     margin-top: 2.5rem;
     width: 20%;
@@ -186,14 +250,21 @@ body {
   list-style: none;
   line-height: 20px;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .menuBox__items {
     float: right;
     margin-right: 2rem;
     margin-top: 1.5rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
+  .menuBox__items {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
   .menuBox__items {
     float: right;
     margin-right: 2rem;
@@ -212,12 +283,17 @@ body {
   color: white;
   position: relative;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .menuBox__link {
     color: black;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
+  .menuBox__link {
+    color: black;
+  }
+}
+@media (min-width: 768px) {
   .menuBox__link {
     color: black;
   }
@@ -238,7 +314,7 @@ body {
   opacity: 0;
   width: 0;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .menuBox__close {
     display: inline-block;
     opacity: 1;
@@ -247,7 +323,16 @@ body {
     margin-top: 1.5rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
+  .menuBox__close {
+    display: inline-block;
+    opacity: 1;
+    float: left;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
   .menuBox__close {
     display: block;
     opacity: 1;
@@ -260,16 +345,25 @@ body {
 .menuBox__burger {
   display: none;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .menuBox__burger {
-    width: 7%;
+    width: 3%;
     position: absolute;
     top: 70%;
-    left: 10%;
+    left: 5%;
     display: block;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
+  .menuBox__burger {
+    width: 3%;
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    display: block;
+  }
+}
+@media (min-width: 768px) {
   .menuBox__burger {
     width: 3%;
     position: absolute;
@@ -292,13 +386,19 @@ body {
   left: 60%;
   z-index: 3000;
 }
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .container__angle {
-    width: 30%;
+    width: 20%;
     left: 80%;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 575px) {
+  .container__angle {
+    width: 20%;
+    left: 80%;
+  }
+}
+@media (min-width: 768px) {
   .container__angle {
     width: 20%;
     left: 80%;
@@ -331,7 +431,17 @@ body {
   justify-content: center;
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media (max-width: 575px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+}
+@media (min-width: 575px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
   .about__wrapper {
     flex-direction: column;
   }
@@ -345,7 +455,6 @@ body {
 }
 .about__grow {
   flex-grow: 1.5;
-  background-color: beige;
   padding: 3rem 2rem;
 }
 .about__main {

@@ -7,20 +7,40 @@
     flex-direction: row;
     position: relative;
 
-    @include for_breakpoint(mobile) {
+    @include for_breakpoint(small) {
         flex-direction: column;
         height: 0%;
-    }
+    } 
 
     @include for_breakpoint(device) {
         flex-direction: column;
         height: 0%;
     } 
 
+    @include for_breakpoint(mobile) {
+        flex-direction: column;
+        height: 0%;
+    }
+
     &__wrapper-left {
         flex: 1;
         height: 80vh;
         flex-grow: 1.5;
+
+        @include for_breakpoint(small) {
+            height: 65vh;
+            flex-grow: 1;
+        }
+
+        @include for_breakpoint(device) {
+            height: 65vh;
+            flex-grow: 1;
+        }
+
+        @include for_breakpoint(mobile) {
+            height: 60vh;
+            flex-grow: 1;
+        }
         
         img {
             width: 100%;
@@ -39,20 +59,25 @@
         width: 77%;
         padding-top: 7rem;
 
-        @include for_breakpoint(mobile) {
+        @include for_breakpoint(small) {
             width: 100%;
-            padding-top: 3rem;
-            height: 70vh;
-            padding-left: 3rem;
-            padding-right: 3rem;
+            height: 60vh;
+            padding: 2rem;
         }
+
 
         @include for_breakpoint(device) {
             width: 100%;
+            height: 60vh;
+            padding: 2rem;
+        }
+
+        @include for_breakpoint(mobile) {
+            width: 100%;
             padding-top: 3rem;
-            height: 75vh;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            height: 65vh;
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
     }
 
@@ -62,8 +87,12 @@
         font-weight: 700;
         line-height: 3rem;
 
+        @include for_breakpoint(small) {
+            font-size: 1.2rem;
+        }
+
         @include for_breakpoint(device) {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
     }
 
@@ -89,6 +118,11 @@
        &:hover {
            color: hsl(0, 0%, 63%);
        }
+
+       @include for_breakpoint(small) {
+           margin-top: 1.5rem;
+           font-size: .6rem;
+       }
     }
 }
 
@@ -100,6 +134,13 @@
     justify-content: center;
     color: hsl(0, 0%, 100%);
     z-index: 3000;
+
+    @include for_breakpoint(small) {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
 
     @include for_breakpoint(device) {
         width: 100%;
@@ -115,6 +156,15 @@
 
 
     &__nav {
+
+        @include for_breakpoint(small) {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 12vh;
+            background-color: hsl(0, 0%, 100%);
+            display: none;
+        }
 
         @include for_breakpoint(device) {
             position: absolute;
@@ -143,6 +193,13 @@
            width: 100%;
        }
 
+       @include for_breakpoint(small) {
+        margin-top: 2.5rem;
+        width: 20%;
+        margin-left: 6rem;
+    }
+
+
        @include for_breakpoint(device) {
            margin-top: 2.5rem;
            width: 20%;
@@ -159,6 +216,12 @@
     &__items {
         list-style: none;
         line-height: 20px;
+
+        @include for_breakpoint(small) {
+            float: right;
+            margin-right: 2rem;
+            margin-top: 1.5rem;
+        }
 
         @include for_breakpoint(device) {
             float: right;
@@ -186,6 +249,10 @@
         font-size: .8rem;
         color: hsl(0, 0%, 100%);
         position: relative;
+
+        @include for_breakpoint(small) {
+            color: hsl(0, 0%, 0%);
+        }
 
         @include for_breakpoint(device) {
             color: hsl(0, 0%, 0%);
@@ -215,6 +282,15 @@
         opacity: 0;
         width: 0;
 
+        @include for_breakpoint(small) {
+            display: inline-block;
+            opacity: 1;
+            float: left;
+            margin-left: 1rem;
+            margin-top: 1.5rem;
+        }
+
+
         @include for_breakpoint(device) {
             display: inline-block;
             opacity: 1;
@@ -236,11 +312,19 @@
     &__burger {
         display: none;
 
-         @include for_breakpoint(device) {
-            width: 7%;
+        @include for_breakpoint(small) {
+            width: 3%;
             position: absolute;
             top: 70%;
-            left: 10%;
+            left: 5%;
+            display: block;
+         }
+
+         @include for_breakpoint(device) {
+            width: 3%;
+            position: absolute;
+            top: 70%;
+            left: 5%;
             display: block;
          }
 
@@ -268,8 +352,13 @@
     left: 60%;
     z-index: 3000;
 
+    @include for_breakpoint(small) {
+        width: 20%;
+        left: 80%;
+    }
+
     @include for_breakpoint(device) {
-        width: 30%;
+        width: 20%;
         left: 80%;
     }
 
@@ -311,9 +400,17 @@
         justify-content: center;
         flex-direction: row;
 
+        @include for_breakpoint(small){
+            flex-direction: column
+        }
+
+        @include for_breakpoint(device){
+            flex-direction: column
+        }
         @include for_breakpoint(mobile) {
             flex-direction: column;
-        }
+         }
+        
     }
 
     &__box {
@@ -327,7 +424,6 @@
 
     &__grow {
         flex-grow: 1.5;
-        background-color: beige;
         padding: 3rem 2rem;
     }
 
